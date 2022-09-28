@@ -1,3 +1,5 @@
+from product import Product
+
 class ShoppingCart:
 
     def __init__(self):
@@ -6,12 +8,11 @@ class ShoppingCart:
     def cart_total(self):
         total = 0
         for item in self.cart:
-            total += product.item_price
+            total += item.item_price
         return total
 
-    def add_to_cart(self, product):
-        self.cart.append(product)
-        print(f"You have added {product.item_name}")
+    def add_to_cart(self, item):
+        self.cart.append(item)
 
     def empty_cart(self):
         self.cart.clear()
