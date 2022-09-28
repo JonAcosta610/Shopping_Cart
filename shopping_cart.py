@@ -1,19 +1,19 @@
-from product import Product
 
 class ShoppingCart:
 
     def __init__(self):
-        self.cart = []
+        self.items = []
 
     def cart_total(self):
-        total = 0
-        for item in self.cart:
-            total += item.item_price
-        return total
+        cart_total = 0
+        for item in self.items:
+            cart_total += item.item_price
+        return cart_total
 
-    def add_to_cart(self, item):
-        self.cart.append(item)
+    def add_item_to_cart(self, item):
+        self.items.append(item)
+        print(f"Added {item} to the cart.")
 
     def empty_cart(self):
-        self.cart.clear()
+        self.items.clear()
         print("Your cart is now empty!")
