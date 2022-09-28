@@ -12,7 +12,7 @@ class ShoppingCart:
 
     def add_item_to_cart(self, item):
         self.items.append(item)
-        print(f"Added {item} to the cart.")
+        print(f"Added {item.item_name} to the cart.")
 
     def empty_cart(self):
         self.items.clear()

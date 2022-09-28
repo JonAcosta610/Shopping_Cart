@@ -8,7 +8,7 @@ class Customer:
 
     def add_to_cart(self, item):
         self.cart.add_item_to_cart(item)
-        print(f"{self.name} has added {item.name} to the cart!")
+        print(f"{self.name} has added {item.item_name} to the cart!")
 
     def items_in_cart(self):
         for item in self.cart.items:
